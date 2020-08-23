@@ -22,7 +22,7 @@ with open(csvpath) as csvfile:
     count = sum(1 for row in csvreader)
 
     #The total number of months included in the dataset
-    print("Total Months: " + str(count)) # Row count minus header
+    print("Total Months: " + str(count)) # Row count minus header 
 
     csvfile.seek(0) # back to the begining of file
     next(csvreader) #Skip the header row
@@ -45,16 +45,12 @@ with open(csvpath) as csvfile:
 
     print("Average Change in Profit and Losses: " + str(Average(pnl_list)))
 
-    #print(pnl_list)
-
+   
     #The greatest increase in profits (date and amount) over the entire period
 
     # sorting the list 
     sorted(pnl_list)
     #print(sorted(pnl_list))
-
-    # printing the last element 
-    #print("Greatest Increase in Profits:", sorted(pnl_list)[-1]) 
 
     #print(sorted(pnl_list)[-1])
     largest_number = sorted(pnl_list)[-1]
@@ -70,8 +66,6 @@ with open(csvpath) as csvfile:
     sorted(pnl_list)
     #print(sorted(pnl_list))
 
-    #printing the first element 
-    #print("Greatest Decrease in Profits:", min(pnl_list))
     smallest_number = min(pnl_list)
     #print(smallest_number)
 
@@ -100,16 +94,15 @@ with open(csvpath) as csvfile:
 
     #Export a text file with the results
     path = os.path.join('analysis', 'budget_results.txt')
-    with open(path, 'w') as csvfile:
-        csvwriter = csv.writer(csvfile)
+    with open(path, 'w') as csvfileout:
+        csvwriter = csv.writer(csvfileout)
         csvwriter.writerow(["Financial Analysis"])
         csvwriter.writerow(["----------------------------------------"])
-        csvwriter.writerow(f"Total Months: {count} ")
-        csvwriter.writerow(f"Total: {pnl} ")
-        csvwriter.writerow(f"Average Change: {Average(pnl_list)} ")
-        csvwriter.writerow(f"Greatest Increase in Profits: {max_date} {largest_number} ")
-        csvwriter.writerow(f"Greatest Decrease in Profits: {min_date} {smallest_number} ")
+        csvwriter.writerow(["Total Months:", count])
+        csvwriter.writerow(["Total:", pnl])
+        csvwriter.writerow(["Average Change:", Average(pnl_list)])
+        csvwriter.writerow(["Greatest Increase in Profits:", max_date, largest_number])
+        csvwriter.writerow(["Greatest Decrease in Profits:", min_date, smallest_number])
             
-
-
-#csvfile.close()
+csvfile.close()
+csvfileout.close()

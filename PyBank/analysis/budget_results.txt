@@ -1,7 +1,7 @@
 Financial Analysis
 ----------------------------------------
-T,o,t,a,l, ,M,o,n,t,h,s,:, ,8,6, 
-T,o,t,a,l,:, ,3,8,3,8,2,5,7,8,.,0, 
-A,v,e,r,a,g,e, ,C,h,a,n,g,e,:, ,-,2,3,1,5,.,1,1,7,6,4,7,0,5,8,8,2,3,4, 
-G,r,e,a,t,e,s,t, ,I,n,c,r,e,a,s,e, ,i,n, ,P,r,o,f,i,t,s,:, ,F,e,b,-,2,0,1,2, ,1,9,2,6,1,5,9,.,0, 
-G,r,e,a,t,e,s,t, ,D,e,c,r,e,a,s,e, ,i,n, ,P,r,o,f,i,t,s,:, ,S,e,p,-,2,0,1,3, ,-,2,1,9,6,1,6,7,.,0, 
+Total Months:,86
+Total:,38382578.0
+Average Change:,-2315.1176470588234
+Greatest Increase in Profits:,Feb-2012,1926159.0
+Greatest Decrease in Profits:,Sep-2013,-2196167.0

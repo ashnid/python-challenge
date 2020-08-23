@@ -97,3 +97,7 @@ with open(output_path, 'w') as csvfile:
     csvwriter.writerow(["----------------------------------------"])
     csvwriter.writerow(["Winner:" , winner])
     csvwriter.writerow(["----------------------------------------"])
+
+    csvfile.close()
+
+    
