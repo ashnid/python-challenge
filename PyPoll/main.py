@@ -82,7 +82,6 @@ with open(csvpath) as csvfile:
     print ("Winner:" , winner)
     print("----------------------------")
 
-
 # Export a text file with the results
 output_path = os.path.join('analysis', 'election_results.txt')
 with open(output_path, 'w') as csvfile:
@@ -91,9 +90,12 @@ with open(output_path, 'w') as csvfile:
     csvwriter.writerow(["----------------------------------------"])
     csvwriter.writerow(["Total Votes: " + str(count)])
     csvwriter.writerow(["----------------------------------------"])
-    csvwriter.writerow(["Number of votes for each candidate:", candidate_count])
+    csvwriter.writerow(["Number of votes for each candidate:[Khan, Correy, Li', O'Tooley]", candidate_count])
     csvwriter.writerow(["----------------------------------------"])
-    csvwriter.writerow(["Percentage for Khan:", Khan_count, "Percentage for Correy:", Correy_count, "Percentage for Li:" , Li_count, "Percentage for O'Tooley:" , OTooley_count])
+    csvwriter.writerow(["Percentage for Khan:", Khan_count])
+    csvwriter.writerow(["Percentage for Correy:", Correy_count]) 
+    csvwriter.writerow(["Percentage for Li:" , Li_count])
+    csvwriter.writerow(["Percentage for O'Tooley:" , OTooley_count])
     csvwriter.writerow(["----------------------------------------"])
     csvwriter.writerow(["Winner:" , winner])
     csvwriter.writerow(["----------------------------------------"])
